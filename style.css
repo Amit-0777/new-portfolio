@@ -1,0 +1,211 @@
+/* ============================================
+   RESET & BASE
+   ============================================ */
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+body {
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+  background-color: #f8f8f8;
+  color: #111111;
+  line-height: 1.5;
+  overflow: hidden;
+  height: 100vh;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+
+/* ============================================
+   DARK MODE
+   ============================================ */
+
+body.dark {
+  background-color: #111111;
+  color: #f0f0f0;
+}
+
+body.dark .logo {
+  color: #f0f0f0;
+}
+
+body.dark .icon-btn {
+  color: #f0f0f0;
+}
+
+body.dark .icon-btn:hover {
+  color: #6b8cff;
+  background-color: rgba(107, 140, 255, 0.1);
+}
+
+body.dark .hero-intro {
+  color: #6b8cff;
+}
+
+body.dark .hero-heading {
+  color: #f0f0f0;
+}
+
+button {
+  background: none;
+  border: none;
+  cursor: pointer;
+  color: inherit;
+  font-family: inherit;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+a.x-link {
+  cursor: pointer;
+  position: relative;
+  z-index: 10;
+}
+
+
+/* ============================================
+   HERO SECTION
+   ============================================ */
+
+.hero {
+  position: relative;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  padding: 0 clamp(2rem, 6vw, 8rem);
+}
+
+
+/* ============================================
+   NAVIGATION
+   ============================================ */
+
+.hero-nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-top: 2.5rem;
+  padding-bottom: 2rem;
+}
+
+.logo {
+  font-size: 1.25rem;
+  font-weight: 700;
+  letter-spacing: -0.02em;
+  color: #111111;
+}
+
+.nav-right {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.icon-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  transition: color 0.2s ease, background-color 0.2s ease;
+  color: #111111;
+}
+
+.icon-btn:hover {
+  color: #3b5bdb;
+  background-color: rgba(59, 91, 219, 0.06);
+}
+
+
+/* ============================================
+   HERO CONTENT
+   ============================================ */
+
+.hero-content {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  max-width: 960px;
+  margin-top: -5rem;
+}
+
+.hero-intro {
+  font-size: clamp(1.5rem, 3vw, 2.5rem);
+  font-weight: 600;
+  color: #3b5bdb;
+  letter-spacing: 0.01em;
+  margin-bottom: 1.75rem;
+}
+
+.hero-heading {
+  font-size: clamp(3rem, 8vw, 6.5rem);
+  font-weight: 800;
+  line-height: 1.05;
+  letter-spacing: -0.035em;
+  color: #111111;
+}
+
+
+/* ============================================
+   RESPONSIVE — TABLET
+   ============================================ */
+
+@media (max-width: 768px) {
+  .hero-nav {
+    padding-top: 1.75rem;
+  }
+
+  .hero-heading {
+    font-size: clamp(2.5rem, 10vw, 4rem);
+  }
+
+  .hero-intro {
+    font-size: 1.5rem;
+    margin-bottom: 1.25rem;
+  }
+}
+
+
+/* ============================================
+   RESPONSIVE — MOBILE
+   ============================================ */
+
+@media (max-width: 480px) {
+  .hero {
+    padding: 0 1.5rem;
+  }
+
+  .hero-nav {
+    padding-top: 1.25rem;
+  }
+
+  .hero-heading {
+    font-size: clamp(2.25rem, 12vw, 3.25rem);
+    line-height: 1.08;
+  }
+
+  .hero-intro {
+    font-size: 1.25rem;
+    margin-bottom: 1rem;
+  }
+
+  .icon-btn {
+    width: 40px;
+    height: 40px;
+  }
+}
