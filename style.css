@@ -616,6 +616,8 @@ html[data-theme="dark"] .chip { background: var(--bg-band); }
    EXPERIENCE
    ========================================================= */
 .exp-grid { margin-top: 26px; align-items: start; }
+.exp-grid.exp-single { grid-template-columns: 1fr; }
+.exp-grid.exp-single .exp { max-width: 460px; }
 
 .exp {
   border-radius: var(--r-lg);
